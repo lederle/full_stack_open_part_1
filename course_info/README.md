@@ -1,8 +1,13 @@
 # Full Stack Open --- Part 1
 
 ## Course Info App
+|Contents                 |
+| ----------------------- |
+| [Step 1](#exercise-1.1) |
+| [Step 2](#exercise-1.2) |
 
-### Exercise 1.1: Course Information, step 1
+### Exercise 1.1
+#### Course Information, Step 1 [&#8593;](#course-info-app)
 
 The application that we will start working on in this exercise will be further developed in a few of the following exercises. In this and other upcoming exercise sets in this course, it is enough to only submit the final state of the application. If desired, you may also create a commit for each exercise of the series, but this is entirely optional.
 
@@ -63,4 +68,20 @@ const App = () => {
   )
 }
 ```
->>>>>>> ex_1.1
+
+## Exercise 1.2
+### Course Information, Step 2 [&#8593;](#course-info-app)
+
+Refactor the Content component so that it does not render any names of parts or their number of exercises by itself. Instead, it only renders three Part components of which each renders the name and number of exercises of one part.
+
+```react
+const Content = ... {
+  return (
+    <div>
+      <Part .../>
+      <Part .../>
+      <Part .../>
+    </div>
+  )
+}
+```
