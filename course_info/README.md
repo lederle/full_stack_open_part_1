@@ -7,6 +7,8 @@
 | [Step 2](#exercise-1.2) |
 | [Step 3](#exercise-1.3) |
 | [Step 4](#exercise-1.4) |
+| [Step 5](#exercise-1.5) |
+
 ### Exercise 1.1
 #### Course Information, Step 1 [&#8593;](#course-info-app)
 
@@ -160,6 +162,39 @@ const App = () => {
       <Header course={course} />
       <Content parts={parts} />
       <Total parts={parts} />
+    </div>
+  )
+}
+```
+
+## Exercise 1.5
+### Course Information, Step 5 [&#8593;](#course-info-app)
+
+Let's take the changes one step further. Change the course and its parts into a single JavaScript object. Fix everything that breaks.
+
+```react
+const App = () => {
+  const course = {
+    name: 'Half Stack application development',
+    parts: [
+      {
+        name: 'Fundamentals of React',
+        exercises: 10
+      },
+      {
+        name: 'Using props to pass data',
+        exercises: 7
+      },
+      {
+        name: 'State of a component',
+        exercises: 14
+      }
+    ]
+  }
+
+  return (
+    <div>
+      ...
     </div>
   )
 }
