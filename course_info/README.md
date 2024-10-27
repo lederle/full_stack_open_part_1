@@ -5,6 +5,7 @@
 | ----------------------- |
 | [Step 1](#exercise-1.1) |
 | [Step 2](#exercise-1.2) |
+| [Step 3](#exercise-1.3) |
 
 ### Exercise 1.1
 #### Course Information, Step 1 [&#8593;](#course-info-app)
@@ -81,6 +82,35 @@ const Content = ... {
       <Part .../>
       <Part .../>
       <Part .../>
+    </div>
+  )
+}
+```
+
+## Exercise 1.3
+### Course Information, Step 3 [&#8593;](#course-info-app)
+
+Let's move forward to using objects in our application. Modify the variable definitions of the App component as follows and also refactor the application so that it still works:
+
+```react
+const App = () => {
+  const course = 'Half Stack application development'
+  const part1 = {
+    name: 'Fundamentals of React',
+    exercises: 10
+  }
+  const part2 = {
+    name: 'Using props to pass data',
+    exercises: 7
+  }
+  const part3 = {
+    name: 'State of a component',
+    exercises: 14
+  }
+
+  return (
+    <div>
+      ...
     </div>
   )
 }
