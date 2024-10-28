@@ -49,3 +49,19 @@ const App = () => {
 
 export default App
 ```
+
+### Exercise 1.7
+#### Unicafe, Step 2 [&#8593;](#unicafe-app)
+
+Expand your application so that it shows more statistics about the gathered feedback: the total number of collected feedback, the average score (good: 1, neutral: 0, bad: -1) and the percentage of positive feedback.
+
+![](./src/assets/14e.png)
+
+### Exercise 1.8
+#### Unicafe, Step 3 [&#8593;](#unicafe-app)
+
+### Exercise 1.9
+#### Unicafe, Step 4 [&#8593;](#unicafe-app)
+
+### Exercise 1.10
+#### Unicafe, Step 5 [&#8593;](#unicafe-app)
