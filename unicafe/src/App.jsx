@@ -1,4 +1,19 @@
-import { useState } from 'react'
+import React from 'react';
+import { useState } from 'react';
+
+function Statistics({good, neutral, bad, total, score}) {
+  return (
+    <div>
+      <h1>statistics</h1>
+      <div>good {good}</div>
+      <div>neutral {neutral}</div>
+      <div>bad {bad}</div>
+      <div>all {total}</div>
+      <div>average {total === 0 ? 0 : score / total}</div>
+      <div>positive {total == 0 ? 0 : 100 * good / total}%</div>
+    </div>
+  );
+}
 
 function App() {
   // save clicks of each button to its own state
@@ -31,16 +46,9 @@ function App() {
         <button onClick={handleNeutral}>neutral</button>
         <button onClick={handleBad}>bad</button>
       </div>
-      <div>
-        <h1>statistics</h1>
-        <div>good {good}</div>
-        <div>neutral {neutral}</div>
-        <div>bad {bad}</div>
-        <div>all {total}</div>
-        <div>average {total === 0 ? 0 : score / total}</div>
-        <div>positive {total == 0 ? 0 : 100 * good / total}%</div>
-      </div>
+      <Statistics good={good} neutral={neutral} bad={bad} total={total} score={score}/>
     </>
   )
 }
-export default App
+
+export default App;
