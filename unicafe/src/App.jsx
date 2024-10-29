@@ -2,6 +2,15 @@ import React from 'react';
 import { useState } from 'react';
 
 function Statistics({good, neutral, bad, total, score}) {
+  if (total === 0) {
+    return (
+      <div>
+        <h1>statistics</h1>
+        <p>No feedback given</p>
+      </div>
+    )
+  }
+
   return (
     <div>
       <h1>statistics</h1>

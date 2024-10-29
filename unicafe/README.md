@@ -88,6 +88,9 @@ const App = () => {
 
 ### Exercise 1.9
 #### Unicafe, Step 4 [&#8593;](#unicafe-app)
+Change your application to display statistics only once feedback has been gathered.
+
+![](./src/assets/15e.png)
 
 ### Exercise 1.10
 #### Unicafe, Step 5 [&#8593;](#unicafe-app)
