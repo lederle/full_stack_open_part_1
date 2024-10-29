@@ -3,11 +3,15 @@
 ## Unicafe App
 |Contents                 |
 | ----------------------- |
-| [Step 1](#exercise-1.6) |
-| [Step 2](#exercise-1.7) |
-| [Step 3](#exercise-1.8) |
-| [Step 4](#exercise-1.9) |
-| [Step 5](#exercise-1.10) |
+| [Unicafe Step 1](#exercise-1.6) |
+| [Unicafe Step 2](#exercise-1.7) |
+| [Unicafe Step 3](#exercise-1.8) |
+| [Unicafe Step 4](#exercise-1.9) |
+| [Unicafe Step 5](#exercise-1.10) |
+| [Unicafe Step 6](#exercise-1.11) |
+| [Anecdotes Step 1](#exercise-1.12) |
+| [Anecdotes Step 2](#exercise-1.13) |
+| [Anecdotes Step 3](#exercise-1.14) |
 
 ### Exercise 1.6
 #### Unicafe, Step 1
@@ -119,7 +123,15 @@ The application's state should still be kept in the root `App` component.
 
 ### Exercise 1.11
 #### Unicafe, Step 6 [&#8593;](#unicafe-app)
+Display the statistics in an HTML table, so that your application looks roughly like this:
 
+![](./src/assets/16e.png)
+
+Remember to keep your console open at all times. If you see this warning in your console:
+
+![](./src/assets/17a.png)
+
+Then perform the necessary actions to make the warning disappear. Try pasting the error message into a search engine if you get stuck.
 
 ### Exercise 1.12
 #### Anecdotes, Step 1 [&#8593;](#unicafe-app)

@@ -3,7 +3,11 @@ import { useState } from 'react';
 
 function StatisticLine({text, value}) {
   return (
-    <div>{text} {value}</div>
+    <>
+    <tr>
+      <td>{text}</td><td>{value}</td>
+    </tr>
+    </>
   );
 }
 
@@ -25,12 +29,17 @@ function Statistics({good, neutral, bad, total, score}) {
   return (
     <div>
       <h1>statistics</h1>
-      <StatisticLine text={"good"} value={good} />
-      <StatisticLine text={"neutral"} value={neutral} />
-      <StatisticLine text={"bad"} value={bad} />
-      <StatisticLine text={"all"} value={total} />
-      <StatisticLine text={"average"} value={total === 0 ? 0 : score / total} />
-      <StatisticLine text={"positive"} value={`${total == 0 ? 0 : 100 * good / total}%`} />
+      <table>
+        <tbody>
+          <StatisticLine text={"good"} value={good} />
+          <StatisticLine text={"neutral"} value={neutral} />
+          <StatisticLine text={"bad"} value={bad} />
+          <StatisticLine text={"all"} value={total} />
+          <StatisticLine text={"average"} value={total === 0 ? 0 : score / total} />
+          <StatisticLine text={"positive"} value={`${total == 0 ? 0 : 100 * good / total}%`} />
+        </tbody>
+      </table>
+
     </div>
   );
 }
