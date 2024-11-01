@@ -9,6 +9,7 @@ const Part = (props) => {
     </p>
   );
 };
+
 const Content = (props) => {
   return (
     <>
@@ -53,6 +54,7 @@ const App = () => {
       <Content parts={course.parts} />
       <Total parts={course.parts} />
     </div>
+
   );
 };
 export default App;
