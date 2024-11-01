@@ -85,3 +85,9 @@ Using an array might be the simpler choice in this case. Searching the Internet 
 ### Exercise 1.14
 
 #### Anecdotes, Step 3 [&#8593;](#anecdotes-app)
+
+Now implement the final version of the application that displays the anecdote with the largest number of votes:
+
+![](./src/assets/20a.png)
+
+If multiple anecdotes are tied for first place it is sufficient to just show one of them.

@@ -1,14 +1,28 @@
 import { useState } from "react";
 
+function DisplayMaxVote({ maxAnecdote, maxVote }) {
+  return (
+    <>
+      <h2>Anecdote with the most votes</h2>
+      <div>
+        <b>{maxAnecdote}</b>
+        <div>has {maxVote} votes</div>
+      </div>
+    </>
+  );
+}
 function DisplayVote({ votes, selected }) {
   return <div>has {votes[selected]} votes</div>;
 }
 
 function DisplayAnecdote({ anecdote, selected }) {
   return (
-    <div>
-      <em>{anecdote[selected]}</em>
-    </div>
+    <>
+      <h2>Anecdote of the day</h2>
+      <div>
+        <em>{anecdote[selected]}</em>
+      </div>
+    </>
   );
 }
 
@@ -47,6 +61,10 @@ function App() {
       <DisplayVote votes={votes} selected={selected} />
       <button onClick={handleVote}>vote</button>
       <button onClick={handleClick}>next anecdote</button>
+      <DisplayMaxVote
+        maxAnecdote={anecdotes[votes.indexOf(Math.max(...votes))]}
+        maxVote={Math.max(...votes)}
+      />
     </>
   );
 }
