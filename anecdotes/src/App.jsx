@@ -1,5 +1,17 @@
 import { useState } from "react";
 
+function DisplayVote({ votes, selected }) {
+  return <div>has {votes[selected]} votes</div>;
+}
+
+function DisplayAnecdote({ anecdote, selected }) {
+  return (
+    <div>
+      <em>{anecdote[selected]}</em>
+    </div>
+  );
+}
+
 function App() {
   const anecdotes = [
     "If it hurts, do it more often.",
@@ -13,6 +25,7 @@ function App() {
   ];
 
   const [selected, setSelected] = useState(0);
+  const [votes, incrementVote] = useState(new Array(anecdotes.length).fill(0));
 
   function getNextIndex(n) {
     return Math.floor(Math.random(0) * n);
@@ -22,10 +35,17 @@ function App() {
     setSelected(getNextIndex(anecdotes.length));
   }
 
+  function handleVote() {
+    const newVoteCount = [...votes];
+    newVoteCount[selected] += 1;
+    incrementVote(newVoteCount);
+  }
+
   return (
     <>
-      <div>{anecdotes[selected]}</div>
-      {console.log(selected)}
+      <DisplayAnecdote anecdote={anecdotes} selected={selected} />
+      <DisplayVote votes={votes} selected={selected} />
+      <button onClick={handleVote}>vote</button>
       <button onClick={handleClick}>next anecdote</button>
     </>
   );
